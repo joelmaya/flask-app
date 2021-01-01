@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang= 'en'>
+	<title>project1</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="../static/main.css">
+</head>
+<body>
+
+	<div class = "container">
+		<h1>Data Collector App</h1>
+		<h2>Please fill the entries to get population statistic on height</h2>
+
+		<div class = "message">	
+           
+            <i class="material-icons" style="color:orange;size: 150px;">feedback</i> {{text | safe}}
+		</div>
+
+		<form  action ="{{ url_for('success')}}" method = "POST" >
+
+			<input  style= "margin-bottom:5px;"title = "your email will be safe with us" placeholder = "Enter your email" type = "email" name = "email_name" Required><br>
+			<input style= "margin-bottom:5px;"text ="your data will be safe with us"  type = "number" placeholder = "Enter your heigth in cm" min = "50" max = "300"  name = "height_name" Required><br>
+
+			<button type = "submit">Submit</button>
+			
+
+
+		</form>
+
+	</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
